@@ -1,6 +1,5 @@
 score = 0;
 cross = true;
-
 audio = new Audio('music.mp3');
 audiogo = new Audio('gameover.mp3');
 setTimeout(() => {
@@ -26,7 +25,6 @@ document.onkeydown = function (e) {
         dino.style.left = (dinoX - 112) + "px";
     }
 }
-
 setInterval(() => {
     dino = document.querySelector('.dino');
     gameOver = document.querySelector('.gameOver');
@@ -40,7 +38,6 @@ setInterval(() => {
 
     offsetX = Math.abs(dx - ox);
     offsetY = Math.abs(dy - oy);
-    // console.log(offsetX, offsetY)
     if (offsetX < 73 && offsetY < 52) {
         gameOver.innerHTML = "Game Over - Reload to Play Again"
         obstacle.classList.remove('obstacleAni')
@@ -67,7 +64,6 @@ setInterval(() => {
     }
 
 }, 10);
-
 function updateScore(score) {
     scoreCont.innerHTML = "Your Score: " + score
 }
